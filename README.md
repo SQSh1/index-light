@@ -15,7 +15,7 @@
 - ساخته شده با HTML و CSS خالص (بدون جاوااسکریپت سنگین)
 
 ### پیش‌نمایش
-https://SQSh1.github.io/startpagelight/  
+https://sqsh1.github.io/bright-minimal-home/  
 (بعد از فعال کردن GitHub Pages، لینک واقعی جایگزین username می‌شود)
 
 ### چطور استفاده کنی؟
