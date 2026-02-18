@@ -15,7 +15,7 @@
 - ساخته شده با HTML و CSS خالص (بدون جاوااسکریپت سنگین)
 
 ### پیش‌نمایش
-https://username.github.io/startpagelight/  
+https://SQSh1.github.io/startpagelight/  
 (بعد از فعال کردن GitHub Pages، لینک واقعی جایگزین username می‌شود)
 
 ### چطور استفاده کنی؟
