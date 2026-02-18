@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startpage</title>
+  <style>
+    :root {
+      --google-blue: #4285f4;
+      --google-red: #ea4335;
+      --google-yellow: #fbbc05;
+      --google-green: #34a853;
+      --google-gray: #202124;
+      --muted: #6b7280;
+      --shadow: rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #fdfdfd;
+      color: #111827;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    h1 {
+      font-size: 2.2rem;          /* کمی کوچکتر */
+      font-weight: 500;           /* کمی بولدتر */
+      color: #111827;
+      margin: 1.5rem 0 2.5rem;
+      letter-spacing: -0.6px;
+    }
+
+    .search-container {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      margin-bottom: 3.5rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 18px 28px;
+      font-size: 1.2rem;
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      outline: none;
+      transition: all 0.25s;
+      box-shadow: 0 2px 8px var(--shadow);
+      background: white;
+      color: #111827;
+    }
+
+    .search-input:focus {
+      border-color: var(--google-blue);
+      box-shadow: 0 2px 14px rgba(66,133,244,0.28);
+    }
+
+    .custom-placeholder {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #9ca3af;
+      transition: opacity 0.25s;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+
+    .search-input:focus + .custom-placeholder,
+    .search-input:not(:placeholder-shown) + .custom-placeholder {
+      opacity: 0;
+    }
+
+    .custom-placeholder span {
+      animation: gentle-float 5s infinite ease-in-out;
+    }
+
+    @keyframes gentle-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-5px); }
+    }
+
+    .g  { color: var(--google-blue); }
+    .o1 { color: var(--google-red); }
+    .o2 { color: var(--google-yellow); }
+    .g2 { color: var(--google-blue); }
+    .l  { color: var(--google-green); }
+    .e  { color: var(--google-red); }
+
+    .app-btn {
+      width: 100%;
+      max-width: 620px;
+      padding: 1.25rem 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      border-radius: 16px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px var(--shadow);
+      margin-bottom: 1.2rem;
+    }
+
+    .app-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .grok     { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+    .chatgpt  { background: linear-gradient(135deg, #10b981, #34d399); }
+    .reddit   { background: linear-gradient(135deg, #ff6b6b, #ff8e53); } /* صورتی-نارنجی شاد */
+    .youtube  { background: linear-gradient(135deg, #ff4d6d, #ff758c); } /* قرمز-صورتی گرم دخترونه */
+    .iptest   { background: linear-gradient(135deg, #7c3aed, #a78bfa); } /* بنفش-آبی روشن شاد */
+
+    .bottom-link {
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: 620px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <form action="https://www.google.com/search" method="get">
+      <input 
+        type="text" 
+        name="q" 
+        class="search-input" 
+        autocomplete="off"
+        placeholder=" "
+      >
+      <div class="custom-placeholder">
+        <span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span>
+        <span class="l">l</span><span class="e">e</span><span> </span>
+        <span class="g">S</span><span class="o1">e</span><span class="o2">a</span><span class="g2">r</span>
+        <span class="l">c</span><span class="e">h</span>
+      </div>
+    </form>
+  </div>
+
+  <h1>Startpage</h1>
+
+  <a href="https://grok.com"     class="app-btn grok"    target="_blank">Grok</a>
+  <a href="https://chatgpt.com"  class="app-btn chatgpt" target="_blank">ChatGPT</a>
+  <a href="https://reddit.com"   class="app-btn reddit"  target="_blank">Reddit</a>
+  <a href="https://youtube.com"  class="app-btn youtube" target="_blank">YouTube</a>
+
+  <div class="bottom-link">
+    <a href="https://browserleaks.com/ip" class="app-btn iptest" target="_blank">IP Test</a>
+  </div>
+
+</body>
+</html>
